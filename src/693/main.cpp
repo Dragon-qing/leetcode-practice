@@ -1,3 +1,11 @@
+/*
+ * @Author: Dragon-qing
+ * @Date: 2026-02-18
+ * @LastEditors: Dragon-qing
+ * @LastEditTime: 2026-02-24
+ * @FilePath: \leetcode\src\693\main.cpp
+ * @Description: 
+ */
 #include <iostream>
 #include <bitset>
 #include <string.h>

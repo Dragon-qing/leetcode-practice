@@ -1,3 +1,10 @@
+/*
+ * @Author: Dragon-qing
+ * @Date: 2026-03-01
+ * @LastEditors: Dragon-qing
+ * @FilePath: \leetcode\src\1491\main.cpp
+ * @Description: math
+ */
 #include <bits/stdc++.h>
 #include <ranges>
 using namespace std;
@@ -7,7 +14,7 @@ public:
     double average(vector<int>& salary) {
         std::ranges::sort(salary);
         int sum = 0;
-        for (int i = 1; i < salary.size() - 1; i++)
+        for (int i = 1; i < (int)salary.size() - 1; i++)
         {
             sum += salary[i];
         }

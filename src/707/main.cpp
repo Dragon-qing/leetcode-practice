@@ -95,17 +95,12 @@ public:
         Node *pre = m_pDummyNode;
         if (index == 0)
         {
-            pre->next = cur->next;
-            cur->next = nullptr;
-            delete cur;
+            m_pDummyNode->next = m_pHead->next;
+            delete m_pHead;
+            m_pHead = m_pDummyNode->next;
             if (m_nSize == 1)
             {
-                m_pHead = nullptr;
                 m_pTail = nullptr;
-            }
-            else
-            {
-                m_pHead = m_pDummyNode->next;
             }
         }
         else
@@ -117,11 +112,10 @@ public:
                 pre = pre->next;
             }
             pre->next = cur->next;
-            cur->next = nullptr;
             delete cur;
             if (index == m_nSize - 1)
             {
-                m_pTail = pre->next;
+                m_pTail = pre;
             }
         }
         m_nSize--;

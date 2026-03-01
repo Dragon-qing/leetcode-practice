@@ -1,3 +1,10 @@
+'''
+Author: Dragon-qing
+Date: 2026-03-01
+LastEditors: Dragon-qing
+FilePath: \leetcode\src\206\Solution.py
+Description: 链表反转
+'''
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):

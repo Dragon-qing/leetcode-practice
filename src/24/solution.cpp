@@ -1,3 +1,10 @@
+/*
+ * @Author: Dragon-qing
+ * @Date: 2026-03-01
+ * @LastEditors: Dragon-qing
+ * @FilePath: \leetcode\src\24\solution.cpp
+ * @Description: 链表 交换相邻两个节点
+ */
 #include <bits/stdc++.h>
 using namespace std;
 

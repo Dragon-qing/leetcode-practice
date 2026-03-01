@@ -1,3 +1,10 @@
+/*
+ * @Author: Dragon-qing
+ * @Date: 2026-03-01
+ * @LastEditors: Dragon-qing
+ * @FilePath: \leetcode\src\707\main.cpp
+ * @Description: 链表，指针
+ */
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,3 +1,10 @@
+/*
+ * @Author: dragon-qing
+ * @Date: 2026-03-04
+ * @LastEditors: dragon-qing
+ * @FilePath: \leetcode\src\202\main.cpp
+ * @Description: 哈希表
+ */
 #include <bits/stdc++.h>
 using namespace std;
 

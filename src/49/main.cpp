@@ -1,3 +1,10 @@
+/*
+ * @Author: dragon-qing
+ * @Date: 2026-03-05
+ * @LastEditors: dragon-qing
+ * @FilePath: \leetcode\src\49\main.cpp
+ * @Description: 哈希
+ */
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -5,29 +12,17 @@ class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
         vector<vector<string>> ans{};
-        unordered_set<int> visited{};
-        for (int i = 0; i < (int)strs.size(); i++)
+        unordered_map<string, vector<string>> hashmap{};
+
+        for (string s : strs)
         {
-            if (visited.contains(i)) continue;
-            string s = strs[i];
-            unordered_set<string>hashset{};
-            vector<string> vec{};
-            vec.push_back(s);
-            ranges::sort(s);
-            hashset.emplace(s);
-            for (int j = i + 1; j < (int)strs.size(); j++)
-            {
-                if (visited.contains(j)) continue;
-                string s2 = strs[j];
-                ranges::sort(s2);
-                if (hashset.contains(s2))
-                {
-                    visited.emplace(j);
-                    vec.push_back(strs[j]);
-                }
-            }
-            ans.push_back(vec);
-            visited.emplace(i);
+            string sortStr = s;
+            ranges::sort(sortStr);
+            hashmap[sortStr].emplace_back(s);
+        }
+        for (auto itr = hashmap.begin(); itr != hashmap.end(); itr++)
+        {
+            ans.emplace_back(itr->second);
         }
         
         return ans;

@@ -53,6 +53,8 @@ public:
 
 int main(int argc, char const *argv[])
 {
+    (void)argc;
+    (void)argv;
     Solution s;
     vector<int> v = {
         1,3,-1,-3,5,3,6,7

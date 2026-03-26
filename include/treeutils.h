@@ -17,5 +17,5 @@
  * @param {int} idx 索引
  * @return {TreeNode*} 节点
  */
-TreeNode* BuildTree(std::vector<int> &arr, int idx = 0);
+TreeNode* BuildBinaryTreeFromVector(std::vector<int> &arr, int idx = 0);
 #endif

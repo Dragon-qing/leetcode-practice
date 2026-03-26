@@ -6,7 +6,7 @@
  * @Description: 树相关工具
  */
 #include "treeutils.h"
-TreeNode* BuildTree(std::vector<int> &arr, int idx = 0)
+TreeNode* BuildBinaryTreeFromVector(std::vector<int> &arr, int idx = 0)
 {
     if (idx >= arr.size())
     {
@@ -18,8 +18,8 @@ TreeNode* BuildTree(std::vector<int> &arr, int idx = 0)
     }
 
     TreeNode* newNode = new TreeNode(arr[idx]);
-    newNode->left = BuildTree(arr, idx * 2 + 1);
-    newNode->right = BuildTree(arr, idx * 2 + 2);
+    newNode->left = BuildBinaryTreeFromVector(arr, idx * 2 + 1);
+    newNode->right = BuildBinaryTreeFromVector(arr, idx * 2 + 2);
 
     return newNode;
 }

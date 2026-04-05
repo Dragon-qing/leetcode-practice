@@ -17,5 +17,20 @@
  * @param {int} idx 索引
  * @return {TreeNode*} 节点
  */
-TreeNode* BuildBinaryTreeFromVector(std::vector<int> &arr, int idx = 0);
+TreeNode* BuildBinaryTreeFromVector(const std::vector<int> &arr, int idx = 0);
+
+/**
+ * @brief: 层序遍历二叉树
+ * @param {TreeNode*} root 根节点
+ * @return {vector<int>} 返回结果数组
+ */
+std::vector<int> LevelOrderTraversal(TreeNode* root);
+
+/**
+ * @brief: 常规遍历二叉树
+ * @param {TreeNode*} root 根节点
+ * @param {int} type 遍历类型（0：前序，1：中序，2：后续）
+ * @return {*}
+ */
+std::vector<int> NormalTraversal(TreeNode* root, int type = 0);
 #endif

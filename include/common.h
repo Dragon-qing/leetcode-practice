@@ -17,4 +17,23 @@
  * @return {std::vector<std::vector<int>>}
  */
 std::vector<std::vector<int>> Read2DVectorIntFromFile(const std::string& filepath);
+
+/**
+ * @brief: 打印输出
+ * @param {vector<T>} vec: 待打印数组
+ * @return {void}
+ */
+template<typename T>
+void PromptOut(const std::vector<T> &vec)
+{
+    int n = vec.size();
+    for (int i = 0; i < n - 1; i++)
+    {
+        std::cout << vec[i] << ',';
+    }
+    if (n >= 1)
+    {
+        std::cout << vec[n - 1] << std::endl;
+    }
+}
 #endif

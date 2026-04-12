@@ -34,7 +34,7 @@ public:
         int ans = INT32_MAX;
         for (int i : views::iota(0, 26))
         {
-            ans = min(ans, dfs(n - 2, word[n - 1] - 'A', i, word, memo));
+            ans = min(ans, dfs(n - 2, word[n - 1] - 'A', i, word, memo)); // i代表的是前缀，最后一个字符已经固定在finger1上，所以i填n-2
         }
 
         return ans;

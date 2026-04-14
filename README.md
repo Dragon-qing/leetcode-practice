@@ -9,6 +9,7 @@
 ```
 *-linux为非win环境下运行的脚本
 *-win为win环境下运行的脚本
+gcc >= 15.2.0
 ```
 
 >:bulb:*.prg文件是project graph的工程文件

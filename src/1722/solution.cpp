@@ -1,3 +1,10 @@
+/*
+ * @Author: Dragon-qing
+ * @Date: 2026-04-21
+ * @LastEditors: Dragon-qing
+ * @FilePath: \leetcode\src\1722\solution.cpp
+ * @Description: 执行交换操作后的最小汉明距离，无向图、DFS
+ */
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -19,7 +26,7 @@ public:
             g[j].push_back(i);
         }
 
-        vector<int8_t> vis(n);
+        vector<int8_t> vis(n); // 访问数组
         unordered_map<int, int> diff;
 
         auto dfs = [&](this auto&& dfs, int x) -> void {
@@ -40,7 +47,7 @@ public:
                 diff.clear();
                 dfs(x);
                 for (auto& [_, c] : diff) {
-                    ans += abs(c);
+                    ans += abs(c); // 统计所有无法抵消的元素
                 }
             }
         }

@@ -21,13 +21,13 @@ class Solution {
 public:
     void BackTracking(int startidx, int n, int k)
     {
-        if (cur.size() == k)
+        if ((int)cur.size() == k)
         {
             res.push_back(cur);
             return;
         }
 
-        for (int i = startidx; i <= n - (k - cur.size()) + 1; i++)
+        for (int i = startidx; i <= n - (k - (int)cur.size()) + 1; i++)
         {
             cur.push_back(i);
             BackTracking(i + 1, n, k);

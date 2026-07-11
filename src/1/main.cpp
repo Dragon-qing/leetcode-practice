@@ -1,17 +1,20 @@
+
 /*
  * @Author: dragon-qing
  * @Date: 2026-03-04
- * @LastEditors: dragon-qing
- * @FilePath: \leetcode\src\1\main.cpp
+ * @LastEditors: Melo-X
+ * @FilePath: /leetcode-practice/src/1/main.cpp
  * @Description: 哈希表
  */
 #include <bits/stdc++.h>
 
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
+    vector<int> twoSum(vector<int> &nums, int target)
+    {
         unordered_map<int, int> numMap;
         int idx = 0;
         for (int i : nums)
@@ -25,13 +28,19 @@ public:
             numMap[i] = idx;
             idx++;
         }
-
         return {};
     }
 };
 
 int main()
 {
-
+    Solution sol;
+    vector<int> nums = {2, 7, 11, 15};
+    vector<int> result = sol.twoSum(nums, 9);
+    for (int i : result)
+    {
+        cout << i << " ";
+    }
+    cout << endl;
     return 0;
 }
